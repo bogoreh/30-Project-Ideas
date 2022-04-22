@@ -1,0 +1,240 @@
+@import url("./bootstrap.min.css");
+@font-face {
+  font-family: "Josefin Sans";
+  src: url("./JosefinSans-Regular.ttf");
+}
+body {
+  background: url("bg.jpg");
+}
+.App {
+  font-family: "Josefin Sans", sans-serif;
+  color: #f12d68;
+}
+header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 55px;
+}
+#fullBox {
+  display: flex;
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+  background: white;
+}
+#about {
+  padding: 7%;
+  padding-top: 80px;
+  background: #212529;
+  width: 50%;
+  color: white;
+}
+#regBox {
+  padding: 7%;
+  padding-top: 40px;
+  background: #ffffff;
+  width: 50%;
+  margin: auto;
+  /* color: black; */
+}
+
+.form-signin {
+  /* max-width: 50px; */
+  width: 100%;
+  min-width: 150px;
+  margin: 0;
+}
+
+.form-control {
+  margin-top: 15px;
+  padding: 10px;
+}
+h5 {
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+/* Hospital Register */
+/* ----------------------------- */
+
+#HosLogTitle {
+  margin-bottom: 15px;
+}
+
+/* LoggedDoner */
+/* ----------------------------- */
+#fullBox2 {
+  display: flex;
+  width: 90%;
+  max-width: 800px;
+  height: 100%;
+  padding: 5%;
+  margin: auto;
+  margin-bottom: 30px;
+  background: white;
+}
+
+.table {
+  margin-top: 3%;
+  width: 100%;
+  border-style: solid;
+  border-color: #2e2e2e;
+  border-width: medium;
+}
+#main {
+  /* width: 100%; */
+  display: block;
+  margin-right: auto;
+}
+#about3 {
+  padding: 20px;
+  background: #212529;
+  width: 270px;
+  height: 270px;
+  color: white;
+}
+#about2 {
+  padding: 20px;
+  background: #212529;
+  width: 270px;
+  height: 400px;
+  color: white;
+  display: none;
+}
+.editLink {
+  margin-right: auto;
+  text-align: right;
+}
+
+.outLink {
+  text-align: right;
+  margin-left: auto;
+}
+
+#edAcct {
+  background: white;
+}
+
+#body2 {
+  display: none;
+}
+#body4 {
+  display: none;
+}
+#divideBtns {
+  display: flex;
+  /* margin: 0; */
+  margin-top: 5px;
+}
+.halfBtn {
+  width: 40%;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+
+#cancelBtn {
+  display: none;
+}
+#confirmBtn {
+  display: none;
+}
+
+/* EditDonorAcct */
+/* ----------------------------- */
+#regBox2 {
+  padding: 50px;
+  padding-top: 40px;
+  background: #ffffff;
+  max-width: 450px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+/* LoggedHospital */
+/* ----------------------------- */
+#fullBox3 {
+  display: block;
+  max-width: 724px;
+  height: 100%;
+  margin: auto;
+  margin-bottom: 30px;
+  background: #ffffff;
+  padding: 30px;
+}
+#searchBox {
+  display: flex;
+  margin-bottom: -20px;
+}
+#myInput {
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  padding: 6px;
+  padding-left: 20px;
+  width: 70%;
+  margin-top: -1px;
+  margin-right: -1px;
+  align-self: center;
+  border-radius: 5px 0 0 5px;
+  border-style: solid;
+  border-color: #2e2e2e;
+  border-width: thin;
+}
+
+#sel1 {
+  border-radius: 0 5px 5px 0;
+  border-style: solid;
+  border-color: #2e2e2e;
+  border-width: thin;
+}
+#options {
+  width: 30%;
+}
+
+#donorRegisterAlert {
+  display: none;
+}
+#donorLoginAlert {
+  display: none;
+}
+
+#hospitalRegisterAlert {
+  display: none;
+}
+#hospitalLoginAlert {
+  display: none;
+}
+
+h6{
+  color: black
+}
+@media (max-width: 800px) {
+  #fullBox {
+    display: block;
+  }
+  #about {
+    width: 100%;
+  }
+  #regBox {
+    width: 100%;
+  }
+
+  #about3 {
+    /* padding-bottom: 50%; */
+    width: 100%;
+    padding: 8%;
+    height: 300px;
+  }
+  #regBox2 {
+    max-width: 300px;
+    padding: 30px;
+  }
+  #fullBox3 {
+    width: 90%;
+  }
+  #fullBox2 {
+    display: block;
+  }
+}
