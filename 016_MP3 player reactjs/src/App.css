@@ -1,0 +1,419 @@
+* {
+  padding: 0;
+}
+
+.player {
+  border-radius: 17px;
+  padding: 10px 15px;
+  box-shadow: 0 0 10px #514d4d;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column-reverse;
+}
+
+.player__container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.player__download {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
+.player__controls {
+  width: 100%;
+  display: none;
+}
+
+.player__list {
+  box-sizing: border-box;
+  background-color: black;
+  position: relative;
+  overflow-y: scroll;
+}
+
+#style-3::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: black;
+}
+
+#style-3::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+#style-3::-webkit-scrollbar-thumb {
+  background-color: rgb(193, 193, 193);
+  border: 2px solid rgb(193, 193, 193);
+  border-radius: 20px;
+}
+
+.player__list--open {
+  max-height: 400px;
+
+  opacity: 1;
+  transition: 300ms all ease-in-out;
+  transform: translateY(0px);
+}
+.player__list--close {
+  visibility: hidden;
+  overflow: hidden;
+  max-height: 0;
+
+  transition: 300ms all ease-in-out;
+  transform: translateY(10px);
+}
+
+.player__list-item {
+  border-top: 1px solid #514d4d;
+  color: white;
+  box-sizing: border-box;
+  padding: 20px 0;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+}
+.player__list-song {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.player__list-item:hover .player__list-song {
+  color: tomato;
+}
+
+.player__list-item:hover .player__list-index {
+  color: tomato;
+}
+
+.player__list-item:first-child {
+  border: none;
+}
+
+.player__list-item--active {
+  color: tomato;
+}
+
+.player__list-index {
+  padding-right: 15px;
+  align-self: flex-end;
+  color: white;
+}
+
+.player__list-img {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.player__active {
+  position: relative;
+  padding-top: 13px;
+  box-sizing: border-box;
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.player-active-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: tomato;
+  margin: 40px 0 20px 0;
+}
+
+.player-active-details__item {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.player-active-details__title {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 5px;
+  color: rgb(193, 193, 193);
+}
+
+.player-active-details__subtitle {
+  font-size: 16px;
+  color: tomato;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player__time {
+  display: flex;
+  color: white;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.player__btn-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0px;
+}
+
+.player__btn-block--sub {
+  justify-content: space-between;
+  margin: 0;
+}
+
+.player__image {
+  margin-top: 10px;
+  transition: all 500ms ease-in-out;
+  border-radius: 7px;
+  transform: scale(1);
+  max-width: 90%;
+  background-color: white;
+}
+
+.player__image--active {
+  transition: all 500ms ease-in-out;
+  transform: scale(1.1);
+}
+
+.player__list-details {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.player__list-artist {
+  padding-top: 5px;
+  font-size: 12px;
+  color: #b7aeae;
+}
+
+p {
+  color: white;
+}
+
+.player__input-wrap {
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 2px dashed #ccc;
+  border-radius: 20px;
+  width: 100%;
+  font-family: sans-serif;
+  padding: 10px 20px;
+  margin-top: 15px;
+}
+
+.player__input-wrap--mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .player__input-wrap--desctop {
+    display: none;
+  }
+
+  .player__input-wrap--mobile {
+    display: block;
+    border: none;
+  }
+}
+
+@font-face {
+  font-family: iconfont;
+  src: url("//static0.qianqian.com/web/st/font/iconfont-4e6.woff")
+    format("woff");
+}
+
+.iconfont {
+  font-family: iconfont !important;
+  font-size: 60px;
+  font-style: normal;
+  color: rgb(193, 193, 193);
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont:hover {
+  color: tomato;
+  transition: color 300ms ease-in-out;
+}
+
+.icon-list:before {
+  align-self: flex-start;
+  font-size: 25px;
+  content: "\e603";
+}
+
+.icon-loop-single:before {
+  position: absolute;
+  font-size: 40px;
+  content: "\e604";
+  top: 24px;
+  left: 97px;
+}
+
+.icon-loop-single--active {
+  color: tomato;
+}
+
+.icon-arrow-right:before {
+  content: "\e605";
+}
+
+.icon-loop:before {
+  content: "\e606";
+}
+
+.icon-prev:before {
+  content: "\e607";
+  margin-right: 30px;
+}
+
+.icon-favor:before {
+  content: "\e608";
+}
+
+.icon-next:before {
+  margin-left: 30px;
+  content: "\e60a";
+}
+
+.icon-download:before {
+  content: "\e60b";
+  font-size: 40px;
+}
+
+.icon-search:before {
+  content: "\e60c";
+}
+
+.icon-zhanwei1:before {
+  content: "\e610";
+}
+
+.icon-favor1:before {
+  content: "\e618";
+}
+
+.icon-random:before {
+  content: "\e619";
+  font-size: 25px;
+  margin-left: -8px;
+}
+
+.icon-play:before {
+  content: "\e616";
+}
+
+.icon-stop:before {
+  content: "\e617";
+}
+
+.icon-arrow-down:before {
+  font-size: 40px;
+  content: "\e61d";
+  position: absolute;
+  left: 44px;
+  top: 26px;
+}
+
+.icon-arrow-left:before {
+  content: "\e61e";
+}
+
+.icon-arrow-up:before {
+  content: "\e61f";
+}
+
+.icon-listen:before {
+  position: absolute;
+  font-size: 40px;
+  left: 156px;
+  top: 23px;
+  content: "\e609";
+}
+
+.icon-listen--active {
+  color: tomato;
+}
+
+.icon-round:before {
+  content: "\e60d";
+}
+
+.icon-triangle:before {
+  content: "\e60e";
+}
+
+.icon-information:before {
+  content: "\e60f";
+}
+
+.icon-home:before {
+  content: "\e611";
+}
+
+.icon-i:before {
+  content: "\e612";
+}
+
+.icon-information-:before {
+  content: "\e613";
+}
+
+.icon-bubble-filled-icon:before {
+  content: "\e614";
+}
+
+.icon-round-right:before {
+  content: "\e615";
+}
+
+.icon-vip:before {
+  content: "\e61a";
+}
+
+.icon-word:before {
+  content: "\e61c";
+}
+.icon-clear svg {
+  cursor: pointer;
+  position: absolute;
+  width: 33px;
+  height: 53px;
+  fill: rgb(193, 193, 193);
+  top: 15px;
+}
+.icon-clear svg:hover {
+  fill: tomato;
+}
