@@ -1,0 +1,91 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.full_height_width {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.quad_one {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+}
+
+.quad_two {
+  top: 0;
+  left: 50%;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+}
+
+.quad_three {
+  top: 50%;
+  left: 0;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+}
+
+.quad_four {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  height: 50%;
+  width: 50%;
+}
+
+.center_me {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
