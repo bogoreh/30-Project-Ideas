@@ -1,0 +1,31 @@
+{
+  "name": "react-alarm-clock",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "15.6.2",
+    "react-dom": "15.6.2",
+    "react-github-corner": "0.3.0"
+  },
+  "devDependencies": {
+    "@kadira/storybook": "2.35.3",
+    "@storybook/cli": "3.4.12",
+    "chai": "4.2.0",
+    "enzyme": "2.9.1",
+    "gh-pages": "1.2.0",
+    "react-dom": "15.6.2",
+    "react-scripts": "0.9.5",
+    "react-test-renderer": "15.6.2",
+    "sinon": "2.4.1"
+  },
+  "homepage": "https://simoneas02.github.io/react-alarm-clock/",  
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public",
+    "deploy": "gh-pages -d ./build"
+  }
+}

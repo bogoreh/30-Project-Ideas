@@ -1,0 +1,53 @@
+.menu {
+  padding: 20px;
+  background: var(--secondary-color);
+  padding-top: 30px;
+  
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  transform: translate3d(-250px,0,0);
+}
+
+.menu__button {
+  text-align: center;
+  font-size: 16px;
+  color: var(--primary-color);
+  font-family: 'Press Start 2P', cursive;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.menu__button:focus {
+  outline: none;
+}
+
+.menu__label {
+  font-size: 12px;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.menu__input {
+  font-size: 12px;
+  padding: 2px;
+
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.show-menu {
+  transform: translate3d(250px,0,0);
+}

@@ -1,0 +1,13 @@
+.header {
+  width: 100%;
+}
+
+.menu-toggle__settings {
+  padding: 10px;
+}
+
+.menu-toggle__text {
+  font-size: 12px;
+  color: var(--text-color);
+  text-decoration: none;
+}
